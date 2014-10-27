@@ -1,0 +1,19 @@
+Christopher Ford
+109469531
+CSE 376 HW #2 Part 3
+
+This folder contains a library called xmalloc and several programs to test xmalloc. xmalloc helps prevent common memory issues by warning the programmer and exit out accordingly.
+
+Test Programs:
+prog-01: Tests to see if xmalloc and xfree work regularly.
+prog-02: Tests for freeing int he middle of a memory chunk.
+prog-03: Tests for double free.
+prog-04: Tests for freeing of illegal memory address.
+prog-05: Tests for memory leaks.
+
+Make File:
+all: Compiles all of the test programs and xmalloc.
+%-gcc: Compiles a single test program. Requires a xmalloc object file.
+xmalloc-gcc: Compiles the xmalloc library into an object file.
+run-%-gcc: Runs a test file, where % is the number 01-05.
+clean: Cleans all .o files.
